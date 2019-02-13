@@ -1,0 +1,38 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js dev
+
+PATH: 
+  /home/az/bin:/home/az/.local/bin:/usr/local/rvm/gems/ruby-2.4.1/bin:/usr/local/rvm/gems/ruby-2.4.1@global/bin:/usr/local/rvm/rubies/ruby-2.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/cmder/vendor/conemu-maximus5/ConEmu/Scripts:/mnt/c/mayhem/path:/mnt/c/cmder/vendor/conemu-maximus5:/mnt/c/cmder/vendor/conemu-maximus5/ConEmu:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/ffmpeg/bin:/mnt/c/ffmpeg:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_14488531:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/az/.windows-build-tools/python27:/mnt/c/Program Files/nodejs/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/mnt/c/Users/az/AppData/Roaming/npm/node_modules/windows-build-tools/node_modules/.bin:/mnt/c/Users/az/AppData/Local/Programs/Python/Python36-32/Scripts:/mnt/c/Users/az/AppData/Local/Programs/Python/Python36-32:/mnt/c/Users/az/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/az/AppData/Local/Yarn/bin:/mnt/c/Users/az/AppData/Roaming/npm:/mnt/c/Users/az/AppData/Local/atom/bin:/mnt/c/Users/az/AppData/Local/atom/bin:/mnt/c/Program Files (x86)/Yarn/bin:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/nodejs:/mnt/c/Users/az/.windows-build-tools/python27:/mnt/c/Program Files/nodejs/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/mnt/c/Users/az/AppData/Roaming/npm/node_modules/windows-build-tools/node_modules/.bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_14488531:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/Yarn/bin:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/az/AppData/Local/Programs/Python/Python36-32/Scripts:/mnt/c/Users/az/AppData/Local/Programs/Python/Python36-32:/mnt/c/Users/az/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/az/AppData/Local/atom/bin:/mnt/c/Users/az/AppData/Local/atom/bin:/mnt/c/Users/az/AppData/Local/Yarn/bin:/mnt/c/Users/az/AppData/Roaming/npm:/mnt/c/mayhem/path:/snap/bin:/usr/local/rvm/bin:/home/az/hub-linux/bin/
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.5.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /mnt/c/mayhem/electron-sample-apps/helloworld/package.json: Unexpected token } in JSON at position 117
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1136:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:109:13
+
+npm manifest: 
+  {
+    "name":    "helloworld",
+    "version": "1.0.1",
+    "main":    "main.js",
+    "scripts": {
+      "dev": "electron .",
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

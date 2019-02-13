@@ -1,0 +1,19 @@
+{
+  "productName": "nanodemo",
+  "appId": "com.nanodemo",
+  "win": {
+    "publisherName": "nanodemo",
+    "publish": {
+      "provider": "s3",
+      "bucket": "nanodemo"
+    },
+    "target": "nsis"
+  },
+  "asar": true,
+  "nsis": {
+    "oneClick": true,
+    "allowToChangeInstallationDirectory": false,
+    "perMachine": true,
+    "artifactName": "${productName} Installer ${version}.${ext}"
+  }
+}
