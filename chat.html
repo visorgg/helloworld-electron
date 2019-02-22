@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Publish Subscribe Tutorial</title>
+</head>
+
+<body>
+<input id="publish-button" type="submit" value="Click here to Publish"/>
+</body>
+
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.min.js"></script>
+<script>
+
+  const uuid = PubNub.generateUUID();
+  const pubnub = new PubNub({
+    publishKey: "pub-c-803ff08a-f64a-4d9b-a639-c9483b30147e",
+    subscribeKey: "sub-c-53e49b3c-f05a-11e9-ad72-8e6732c0d56b",
+    uuid: uuid
+  });
+
+  const button = document.getElementById('publish-button');
+
+  button.addEventListener('click', () => {
+    pubnub.publish({
+      channel : "pubnub_onboarding_channel",
+      message : {"sender": uuid, "content": "Hello From JavaScript SDK"}
+    }, function(status, response) {
+      //Handle error here
+    });
+  });
+
+  pubnub.subscribe({
+    channels: ['pubnub_onboarding_channel'],
+    withPresence: true
+  });
+
+  pubnub.addListener({
+    message: function(event) {
+      let pElement = document.createElement('p');
+      pElement.appendChild(document.createTextNode(event.message.content));
+      document.body.appendChild(pElement);
+    },
+    presence: function(event) {
+      let pElement = document.createElement('p');
+      pElement.appendChild(document.createTextNode(event.uuid + " has joined. That's you!"));
+      document.body.appendChild(pElement);
+    }
+  });
+
+  pubnub.history(
+    {
+      channel: 'pubnub_onboarding_channel',
+      count: 10,
+      stringifiedTimeToken: true,
+    },
+    function (status, response) {
+      let pElement = document.createElement('h3');
+      pElement.appendChild(document.createTextNode('historical messages'));
+      document.body.appendChild(pElement);
+
+      pElement = document.createElement('ul');
+      let msgs = response.messages;
+      for (let i in msgs) {
+        msg = msgs[i];
+        let pElement = document.createElement('li');
+        pElement.appendChild(document.createTextNode('sender: ' + msg.entry.sender + ', content: ' + msg.entry.content));
+        document.body.appendChild(pElement);
+      }
+    }
+  );
+
+</script>
+</html>

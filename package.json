@@ -37,11 +37,17 @@
     "build": "electron-builder"
   },
   "devDependencies": {
-    "electron": "2.0.8",
+    "electron": "4.1.4",
     "electron-builder": "^20.11.1"
   },
   "dependencies": {
-    "iohook": "^0.3.1"
+    "electron-is-dev": "^1.1.0",
+    "fs-extra": "^7.0.1",
+    "https": "^1.0.0",
+    "iohook": "^0.3.1",
+    "react-zlib-js": "^1.0.4",
+    "xml2js": "^0.4.19",
+    "zlib": "^1.0.5"
   },
   "iohook": {
     "targets": [
