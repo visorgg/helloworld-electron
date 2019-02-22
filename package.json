@@ -37,22 +37,7 @@
     "build": "electron-builder"
   },
   "devDependencies": {
-    "electron": "2.0.8",
-    "electron-builder": "^20.11.1"
-  },
-  "dependencies": {
-    "iohook": "^0.3.1"
-  },
-  "iohook": {
-    "targets": [
-      "node-57",
-      "electron-57"
-    ],
-    "platforms": [
-      "win32"
-    ],
-    "arches": [
-      "x64"
-    ]
+    "electron": "7.1.13",
+    "electron-builder": "^21.2.0"
   }
 }
